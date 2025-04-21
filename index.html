@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laporan Teori</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0b0f2e, #1b2955);
+      color: #00eaff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #00eaff;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      border: 2px solid #00eaff;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 800px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    h3 {
+      cursor: pointer;
+      color: #ffd700;
+      margin-top: 0;
+    }
+
+    .button-ui {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .button-ui button {
+      background: transparent;
+      border: 2px solid #00eaff;
+      color: #00eaff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button-ui button:hover {
+      background-color: #00eaff;
+      color: #000;
+    }
+
+    .messy-mode {
+      background-color: #ff0;
+      color: #f00;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .messy-mode h3 {
+      color: #f00;
+    }
+  </style>
+</head>
+<body class="neat-mode">
+  <h1>LAPORAN TEORI</h1>
+  <h2>Muchtar Fauzan Aminuddin | 202332059</h2>
+
+  <div class="button-ui">
+    <button onclick="toggleMode()">Tukar Tampilan</button>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">1. Mengapa menggunakan CSS dan JavaScript dalam pemrograman web?</h3>
+    <div>CSS mempercantik tampilan web, JavaScript menambahkan interaksi dinamis seperti event, animasi, dan logika aplikasi.</div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">2. Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web?</h3>
+    <div>Dapat disisipkan langsung dalam file HTML menggunakan tag &lt;style&gt; dan &lt;script&gt;, atau melalui file eksternal.</div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">3. Jelaskan apa saja keuntungan menggunakan JavaScript dan CSS?</h3>
+    <div>JavaScript memberikan fungsionalitas interaktif, sedangkan CSS mengatur tampilan layout dan desain halaman.</div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">4. Jelaskan apa saja keuntungan menggunakan Bootstrap?</h3>
+    <div>Bootstrap memberikan framework CSS siap pakai yang memudahkan pengembangan web responsif dan modern.</div>
+  </div>
+
+  <div class="section">
+    <h3 onclick="toggleSection(this)">5. Contoh Penggunaan Bootstrap</h3>
+    <div>
+      Contoh: &lt;button class="btn btn-primary"&gt;Klik Saya&lt;/button&gt;<br>
+      Fungsinya: Membuat tombol dengan gaya Bootstrap.<br><br>
+      Screenshot: <br>
+      <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/dstZLdXY/Screenshot-2025-04-21-215207.png" alt="Screenshot-2025-04-21-215207" border="0"></a>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(header) {
+      const content = header.nextElementSibling;
+      const confirmToggle = confirm("Ingin menyembunyikan/memperlihatkan bagian ini?");
+      if (confirmToggle) {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('messy-mode');
+    }
+  </script>
+</body>
+</html>
